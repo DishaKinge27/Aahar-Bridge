@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  ::selection {
+    @apply bg-green-200 text-green-900 dark:bg-green-900 dark:text-green-100;
+  }
+}
+
+@layer components {
+  /* Shared form control styling (inputs, selects, textareas). */
+  .field-control {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-[15px] text-slate-900 placeholder-slate-400 transition focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:disabled:bg-slate-800;
+  }
+
+  .field-invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-500/20 dark:border-red-500;
+  }
+}
